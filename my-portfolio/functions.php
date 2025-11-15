@@ -152,6 +152,12 @@ add_action('widgets_init', 'portfolio_widgets_init');
  *    - cta_whatsapp_number (Text)
  *    - cta_email (Email)
  *    - cta_phone (Text)
+ * 
+ * 9. Social Media Links
+ *    - linkedin_url (URL) - Default: https://www.linkedin.com/in/aryan-lohia
+ *    - instagram_url (URL)
+ *    - twitter_url (URL)
+ *    - facebook_url (URL)
  */
 
 /**

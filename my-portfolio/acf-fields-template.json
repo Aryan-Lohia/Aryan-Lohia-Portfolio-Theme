@@ -395,6 +395,51 @@
           }
         ]
       ]
+    },
+    {
+      "key": "group_social_media",
+      "title": "Social Media Links",
+      "fields": [
+        {
+          "key": "field_linkedin_url",
+          "label": "LinkedIn URL",
+          "name": "linkedin_url",
+          "type": "url",
+          "default_value": "https://www.linkedin.com/in/aryan-lohia",
+          "placeholder": "https://www.linkedin.com/in/your-profile"
+        },
+        {
+          "key": "field_instagram_url",
+          "label": "Instagram URL",
+          "name": "instagram_url",
+          "type": "url",
+          "default_value": "https://www.instagram.com/kaalrav/?hl=en",
+          "placeholder": "https://www.instagram.com/your-profile"
+        },
+        {
+          "key": "field_twitter_url",
+          "label": "Twitter/X URL",
+          "name": "twitter_url",
+          "type": "url",
+          "placeholder": "https://twitter.com/your-profile"
+        },
+        {
+          "key": "field_facebook_url",
+          "label": "Facebook URL",
+          "name": "facebook_url",
+          "type": "url",
+          "placeholder": "https://facebook.com/your-profile"
+        }
+      ],
+      "location": [
+        [
+          {
+            "param": "page_type",
+            "operator": "==",
+            "value": "front_page"
+          }
+        ]
+      ]
     }
   ],
   "_instructions": [
