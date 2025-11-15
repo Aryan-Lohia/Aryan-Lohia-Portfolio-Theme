@@ -1,0 +1,12 @@
+# Node/build
+node_modules/
+dist/
+build/
+.env
+*.log
+
+# WordPress courtesy
+wp-config.php
+uploads/
+.DS_Store
+Thumbs.db

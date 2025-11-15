@@ -1,0 +1,237 @@
+/**
+ * Custom WordPress Theme Styles
+ * Additional styles and overrides for WordPress-specific elements
+ * 
+ * @package My_Portfolio
+ */
+
+/* ===== WordPress Admin Bar Fixes ===== */
+body.admin-bar {
+    margin-top: 0 !important;
+}
+
+body.admin-bar #sticky-navbar {
+    top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+    body.admin-bar #sticky-navbar {
+        top: 46px;
+    }
+}
+
+/* ===== Smooth Scrolling ===== */
+html {
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+
+/* ===== Hero Section Initial State ===== */
+.hero-content,
+.hero-image {
+    opacity: 0;
+    transform: translateY(2.5rem);
+    transition: all 1s ease-out;
+}
+
+.hero-image {
+    transition-delay: 300ms;
+}
+
+/* ===== WordPress Block Editor Prose Styles ===== */
+.prose {
+    color: #d1d5db;
+    max-width: none;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+    color: #ffffff;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.prose p {
+    margin-bottom: 1rem;
+    line-height: 1.75;
+}
+
+.prose a {
+    color: #facc15;
+    text-decoration: underline;
+}
+
+.prose a:hover {
+    color: #fde047;
+}
+
+.prose ul,
+.prose ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.prose li {
+    margin-bottom: 0.5rem;
+}
+
+.prose strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.prose code {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+}
+
+.prose pre {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+}
+
+.prose img {
+    border-radius: 0.75rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.prose blockquote {
+    border-left: 4px solid #facc15;
+    padding-left: 1rem;
+    font-style: italic;
+    color: #9ca3af;
+    margin: 1rem 0;
+}
+
+/* ===== Animation Classes ===== */
+.animate-fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== WordPress Navigation Pagination ===== */
+.navigation.pagination {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.navigation.pagination .nav-links {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.navigation.pagination .page-numbers {
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.navigation.pagination .page-numbers:hover {
+    background: #facc15;
+    color: #000000;
+}
+
+.navigation.pagination .page-numbers.current {
+    background: #facc15;
+    color: #000000;
+}
+
+/* ===== Post Navigation ===== */
+.post-navigation a {
+    color: #facc15;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.post-navigation a:hover {
+    color: #fde047;
+}
+
+/* ===== Gallery Hover Effects Initial State ===== */
+.gallery-item .project-link {
+    transform: translateY(1rem);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+/* ===== Utility Classes ===== */
+.delay-700 {
+    animation-delay: 700ms;
+}
+
+.delay-1000 {
+    animation-delay: 1000ms;
+}
+
+/* ===== Loading Skeleton (Optional) ===== */
+.skeleton {
+    background: linear-gradient(90deg, rgba(255,255,255,0.05) 25%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.05) 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* ===== Accessibility Improvements ===== */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Focus visible for keyboard navigation */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #facc15;
+    outline-offset: 2px;
+}
+
+/* ===== Print Styles ===== */
+@media print {
+    #sticky-navbar,
+    .animate-pulse,
+    .absolute.top-1\/4,
+    .absolute.bottom-1\/4 {
+        display: none !important;
+    }
+}
+
